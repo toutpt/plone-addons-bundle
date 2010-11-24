@@ -1,0 +1,9 @@
+<relstorage source>
+    <postgresql>
+        dsn dbname='${database:dbname}' user='${database:dbuser}' host='localhost' password='${database:dbpassword}'
+    </postgresql>
+</relstorage>
+
+<filestorage destination>
+    path ${buildout:directory}/var/Data.fs.FROMPOSTGRESQL
+</filestorage>

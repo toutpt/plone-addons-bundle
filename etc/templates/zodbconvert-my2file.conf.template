@@ -1,0 +1,12 @@
+<relstorage source>
+  <mysql>
+      db ${database:dbname}
+      host localhost
+      user ${database:dbuser}
+      passwd ${database:dbpassword}
+  </mysql>
+</relstorage>
+
+<filestorage destination>
+  path ${buildout:directory}/var/Data.fs.FROMMYSQL
+</filestorage>

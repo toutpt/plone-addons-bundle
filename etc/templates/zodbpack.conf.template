@@ -1,0 +1,7 @@
+<relstorage>
+  pack-gc true
+  pack-duty-cycle 0.9
+  <postgresql>
+    dsn dbname='${database:dbname}' user='${database:dbuser}' host='localhost' password='${database:dbpassword}'
+  </postgresql>
+</relstorage>

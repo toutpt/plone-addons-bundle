@@ -1,0 +1,19 @@
+<VirtualHost *:80>
+ServerAdmin     jmf@makina-corpus.com
+ServerName      nmd.localhost
+ServerAlias     nmd-plone.makina-corpus.net
+
+DocumentRoot /var/www/nmd-plone/
+
+LogLevel warn
+
+ProxyRequests off
+<Proxy *>
+  Order allow,deny
+  Allow from all
+</Proxy>
+
+RewriteEngine on
+RewriteRule ^(.*) http://nmd.localhost:8080/VirtualHostBase/http/nmd.localhost:80/plone/VirtualHostRoot$1 [P,L]
+ProxyPassReverse ^/plone/ http://nmd.localhost:8080/VirtualHostBase/http/nmd.localhost:80/plone/VirtualHostRoot/
+</VirtualHost>

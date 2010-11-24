@@ -1,0 +1,66 @@
+#uber buildout
+[hosts]
+cache = 127.0.0.1
+supervisor = 127.0.0.1
+balancer = 0.0.0.0
+instance1 = 127.0.0.1
+instance2 = 127.0.0.1
+instance3 = 127.0.0.1
+instance4 = 127.0.0.1
+instance5 = 127.0.0.1
+instance6 = 127.0.0.1
+newsletter = 127.0.0.1
+instance-debug = 127.0.0.1
+syslog = 127.0.0.1
+deliverance = 127.0.0.1
+deliverance-backend = 127.0.0.1
+
+[ports]
+balancer = 8201
+cache    = 8101
+instance1 = 8401
+instance2 = 8402
+instance3 = 8403
+instance4 = 8404
+instance5 = 8406
+instance6 = 8407
+instance-newsletter = 8405
+instance1-icp = 8401
+instance2-icp = 8402
+instance3-icp = 8403
+instance4-icp = 8404
+instance5-icp = 8406
+instance6-icp = 8407
+instance-debug = 8499
+supervisor = 9001
+deliverance = 8000
+deliverance-backend = 8404
+
+[users]
+# Balancer - default in production mode: www-data
+balancer = TODO
+# Zope - default in production mode: zope
+zope = TODO
+# Newsletter Instance
+newsletteruser = TODO
+newsletterpassword = TODO
+# Supervisor
+supervisor = TODO
+supervisorpassword = TODO
+cache = TODO
+
+[database]
+dbtype = TODO
+dbname = TODO
+dbuser = TODO
+dbpassword = TODO
+# default in production mode: localhost
+dbhost = TODO
+
+[instance]
+#mode read only
+#relstorage+=
+#    read-only True
+#zope-conf-additional=
+#    enable-product-installation off
+

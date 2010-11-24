@@ -1,0 +1,14 @@
+<relstorage source>
+        <postgresql>
+            dsn dbname='${database:dbname}' user='${database:dbuser}' host='localhost' password='${database:dbpassword}'
+        </postgresql>
+</relstorage>
+
+<relstorage destination>
+  <mysql>
+      db ${database:dbname}
+      host localhost
+      user ${database:dbuser}
+      passwd ${database:dbpassword}
+  </mysql>
+</relstorage>
